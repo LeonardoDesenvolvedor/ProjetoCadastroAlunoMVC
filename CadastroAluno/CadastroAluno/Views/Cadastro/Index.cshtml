@@ -9,16 +9,25 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>CADASTRO</title>
 </head>
 <body>
     <p>
-        @Html.ActionLink("Criar novo", "Create")
+        @Html.ActionLink("Cadastrar Novo", "Create")
     </p>
     <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobrenome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Curso)
             </th>
             <th></th>
         </tr>
@@ -29,8 +38,17 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curso)
+            </td>
+            <td>
                 @Html.ActionLink("Editar", "Edit", new { id=item.CadastroId }) |
-                @Html.ActionLink("Detalhes", "Details", new { id=item.CadastroId }) |
+                @Html.ActionLink("Visualizar", "Details", new { id=item.CadastroId }) |
                 @Html.ActionLink("Apagar", "Delete", new { id=item.CadastroId })
             </td>
         </tr>
